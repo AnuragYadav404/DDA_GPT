@@ -210,6 +210,8 @@ else:
 
 model = GPT2Model(config=gpt_config)
 
+model = model.to(device)
+
 # we are only running on cuda for now
 model = torch.compile(model) # only possible on cuda for now
 
